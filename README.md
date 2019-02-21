@@ -6,6 +6,9 @@ Dependents:
 2. python3
 3. docker run /mnt1/ngs-output/ngsresultapproval/Sanger/PrimerDesigns/
 
+Usage:
+python autoprimerdesign.v1.0.py -i INPUT -s SEQ -p PARA -n NAME
+
 Input: 
 1. variants infor (TXT)
 
@@ -13,8 +16,13 @@ example:
 RUNNAME SAMPLE_ID       CHROM   POS     REF     ALT     GT      REQUEST_DATE    Remarks
 C8F82   1901-90411      17      59793412        G       A       G/A     16/2/2019       Highest priority
 
-2. paramter configue table for primer3_core
+2. parameter configue table for primer3_core
+2.1 parameter_fordocker.txt: PRIMER_THERMODYNAMIC_PARAMETERS_PATH=/opt/conda/pkgs/primer3-2.4.1a-pl526hfc679d8_0/share/primer3/primer3_config/
+2.2 parameters_forserver.txt: #PRIMER_THERMODYNAMIC_PARAMETERS_PATH=/opt/conda/pkgs/primer3-2.4.1a-pl526hfc679d8_0/share/primer3/primer3_config/
+
 3. sequence data (FASTA/FASTQ)
+/mnt/ngs-output/ngsdatabases/database_dev1.0/b37/human_g1k_v37_decoy.fasta
+
 4. name for this run
 
 Output: 
